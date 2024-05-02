@@ -1,0 +1,36 @@
+---
+title: "Mon test quarto"
+author: "John Wayne"
+format: html
+output: "index.html"
+editor: visual
+bibliography: references.bib
+---
+
+# Paramétrage
+
+Je charge mes librairies
+
+```{r}
+library(tidyverse)
+library(sf)
+library(tmap)
+```
+
+Je charge mes données @goodman2018
+
+```{r}
+AP_Vahatra <- st_read("https://raw.githubusercontent.com/BETSAKA/Tools/main/data/AP_Vahatra.geojson")
+```
+
+# Visualisation
+
+```{r}
+tmap_mode("view")
+
+tm_shape(AP_Vahatra) + 
+  tm_polygons() + 
+  tmap_options(check.and.fix = TRUE)
+```
+
+# Références
