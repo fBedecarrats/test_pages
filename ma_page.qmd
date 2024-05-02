@@ -2,7 +2,7 @@
 title: "Mon test quarto"
 author: "John Wayne"
 format: html
-output: "index.html"
+output-file: "index.html"
 editor: visual
 bibliography: references.bib
 ---
